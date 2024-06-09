@@ -7,13 +7,4 @@
         <servlet-name>registroLibroServlet</servlet-name>
         <url-pattern>/registroLibro</url-pattern>
     </servlet-mapping>
-
-    <servlet>
-        <servlet-name>registroCategoriaServlet</servlet-name>
-        <servlet-class>com.gestion.gestionlibros.controller.RegistroCategoriaServlet</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>registroCategoriaServlet</servlet-name>
-        <url-pattern>/registroCategoria</url-pattern>
-    </servlet-mapping>
 </web-app>
