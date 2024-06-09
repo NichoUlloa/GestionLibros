@@ -1,33 +1,27 @@
 package com.gestion.gestionlibros.model;
 
-public enum CategoriaLibro {
-    // Científico, literario, biografía, monografía
-    CIENTIFICO("Científico"), LITERARIO("Literario"), BIOGRAFIA("Biografía"), MONOGRAFIA("Monografía");
+public class CategoriaLibro {
+    private int id;
+    private String categoria;
 
-    private final String categoria;
-
-    private CategoriaLibro(String categoria ) {
+    public CategoriaLibro(int id, String categoria) {
+        this.id = id;
         this.categoria = categoria;
     }
-    private CategoriaLibro() {
-        this.categoria = "";
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getCategoria() {
         return categoria;
     }
 
-    public static CategoriaLibro getCategoriaLibro(String categoria) {
-        for (CategoriaLibro c : values()) {
-            if (c.getCategoria().equals(categoria)) {
-                return c;
-            }
-        }
-        return null;
-    }
-
-    @Override
-    public String toString() {
-        return categoria;
+    public void setCategoria(String categoria) {
+        this.categoria = categoria;
     }
 }

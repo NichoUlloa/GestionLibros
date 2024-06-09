@@ -9,35 +9,27 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b554cac0-e56b-4728-b8ed-eca668e20600" name="Changes" comment="commit README.md">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/gestion/gestionlibros/controller/RegistroCategoriaServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/gestion/gestionlibros/controller/RegistroLibroServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/gestion/gestionlibros/model/CategoriaLibro.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/gestion/gestionlibros/model/Libro.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/gestion/gestionlibros/model/TipoLibro.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/gestion/gestionlibros/model/data/DBConnector.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/gestion/gestionlibros/model/data/DBGenerator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/gestion/gestionlibros/model/data/dao/CategoriaLibroDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/gestion/gestionlibros/model/data/dao/LibroDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/estilos.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/registroCategoria.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/registroErroneoCategoriaLibro.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/registroErroneoLibro.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/registroExitosoCategoriaLibro.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/registroExitosoLibro.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/registroLibro.jsp" afterDir="false" />
+    <list default="true" id="b554cac0-e56b-4728-b8ed-eca668e20600" name="Changes" comment="actualizacion clases y packages">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/gestion/gestionlibros/filter/CharacterEncodingFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/css/estilos.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gestion/gestionlibros/controller/RegistroCategoriaServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gestion/gestionlibros/controller/RegistroCategoriaServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gestion/gestionlibros/controller/RegistroLibroServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gestion/gestionlibros/controller/RegistroLibroServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gestion/gestionlibros/model/CategoriaLibro.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gestion/gestionlibros/model/CategoriaLibro.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gestion/gestionlibros/model/Libro.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gestion/gestionlibros/model/Libro.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gestion/gestionlibros/model/data/DBGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gestion/gestionlibros/model/data/DBGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gestion/gestionlibros/model/data/dao/CategoriaLibroDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gestion/gestionlibros/model/data/dao/CategoriaLibroDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gestion/gestionlibros/model/data/dao/LibroDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gestion/gestionlibros/model/data/dao/LibroDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/estilos.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/registroCategoria.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/registroCategoria.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/registroErroneoCategoriaLibro.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/registroErroneo.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/registroErroneoLibro.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/registroExitoso.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/registroExitosoCategoriaLibro.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/registroExitosoLibro.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/mostrarLibros.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/registroLibro.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/registroLibro.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,8 +46,19 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "NichoUlloa"
+  }
+}]]></component>
   <component name="GithubPullRequestsUISettings"><![CDATA[{
   "selectedUrlAndAccountId": {
     "url": "https://github.com/NichoUlloa/GestionLibros.git",
@@ -91,8 +94,8 @@
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Tomcat Server.Tomcat 10.1.24.executor": "Debug",
-    "git-widget-placeholder": "master",
+    "Tomcat Server.Tomcat 10.1.24.executor": "Run",
+    "git-widget-placeholder": "develop",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/Nicho/IdeaProjects/GestionLibros",
     "node.js.detected.package.eslint": "true",
@@ -102,12 +105,21 @@
     "nodejs_package_manager_path": "npm",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Nicho\IdeaProjects\GestionLibros\src\main\webapp\css" />
+      <recent name="C:\Users\Nicho\IdeaProjects\GestionLibros\src\main\webapp\WEB-INF" />
+      <recent name="C:\Users\Nicho\IdeaProjects\GestionLibros\src\main\webapp\WEB-INF\css" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="Tomcat 10.1.24" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 10.1.24" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="BROWSER_ID" value="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" />
       <deployment>
         <artifact name="GestionLibros:war exploded">
           <settings>
@@ -212,7 +224,7 @@
       <updated>1717526473073</updated>
       <workItem from="1717526474235" duration="5108000" />
       <workItem from="1717886157700" duration="1096000" />
-      <workItem from="1717889642490" duration="437000" />
+      <workItem from="1717889642490" duration="5639000" />
     </task>
     <task id="LOCAL-00001" summary="commit README.md">
       <option name="closed" value="true" />
@@ -222,7 +234,15 @@
       <option name="project" value="LOCAL" />
       <updated>1717890049660</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="actualizacion clases y packages">
+      <option name="closed" value="true" />
+      <created>1717890136697</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1717890136697</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -230,6 +250,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="commit README.md" />
-    <option name="LAST_COMMIT_MESSAGE" value="commit README.md" />
+    <MESSAGE value="actualizacion clases y packages" />
+    <option name="LAST_COMMIT_MESSAGE" value="actualizacion clases y packages" />
   </component>
 </project>

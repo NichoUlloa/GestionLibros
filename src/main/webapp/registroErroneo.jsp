@@ -3,12 +3,12 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Registrar Categoría</title>
+    <title>Registro Erróneo</title>
     <link rel="stylesheet" type="text/css" href="css/estilos.css">
 </head>
 <body>
 <header>
-    <h1>Registrar Nueva Categoría</h1>
+    <h1>Registro Erróneo</h1>
 </header>
 <nav>
     <ul>
@@ -20,11 +20,9 @@
 </nav>
 <main>
     <section>
-        <form action="registroCategoria" method="post">
-            <label for="categoria">Categoría:</label>
-            <input type="text" id="categoria" name="categoria" required>
-            <button type="submit">Registrar</button>
-        </form>
+        <p>Hubo un error en el registro. Por favor, intente nuevamente.</p>
+        <p><%= request.getAttribute("error") %></p>
+        <a href="index.jsp">Volver al inicio</a>
     </section>
 </main>
 <footer>

@@ -1,8 +1,6 @@
 package com.gestion.gestionlibros.model;
 
 public class Libro {
-    // atributos
-    // ISBN String, nombre String, editorial String, categoriaLibro CategoriaLibro, anio int, tipoLibro TipoLibro
     private String ISBN;
     private String nombre;
     private String editorial;
@@ -10,7 +8,6 @@ public class Libro {
     private int anio;
     private TipoLibro tipoLibro;
 
-    // constructor
     public Libro(String ISBN, String nombre, String editorial, CategoriaLibro categoriaLibro, int anio, TipoLibro tipoLibro) {
         this.ISBN = ISBN;
         this.nombre = nombre;

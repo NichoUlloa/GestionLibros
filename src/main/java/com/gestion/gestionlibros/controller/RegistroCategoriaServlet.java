@@ -1,12 +1,8 @@
 package com.gestion.gestionlibros.controller;
 
 import com.gestion.gestionlibros.model.CategoriaLibro;
-import com.gestion.gestionlibros.model.Libro;
-import com.gestion.gestionlibros.model.TipoLibro;
 import com.gestion.gestionlibros.model.data.DBGenerator;
 import com.gestion.gestionlibros.model.data.dao.CategoriaLibroDAO;
-import com.gestion.gestionlibros.model.data.dao.LibroDAO;
-
 import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
@@ -16,48 +12,43 @@ import jakarta.servlet.http.HttpServletResponse;
 import org.jooq.DSLContext;
 
 import java.io.IOException;
-import java.util.List;
+
 @WebServlet(name = "registroCategoriaServlet", value = "/registroCategoria")
-public class RegistroCategoriaServlet {
+public class RegistroCategoriaServlet extends HttpServlet {
+    @Override
     public void init() throws ServletException {
         try {
-            DBGenerator.iniciarBD("LibrosBD");
+            DBGenerator.iniciarBD("librosbd");
         } catch (ClassNotFoundException e) {
-            e.printStackTrace();
+            throw new ServletException("Error initializing database", e);
         }
     }
 
+    @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         RequestDispatcher respuesta = req.getRequestDispatcher("/registroCategoria.jsp");
-        respuesta.forward(req,resp);
+        respuesta.forward(req, resp);
     }
 
+    @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        RequestDispatcher respuesta = req.getRequestDispatcher("/registroErroneoCategoriaLibro.jsp");
-        if(req.getParameter("categoria").length()!=0){
-            String categoria = req.getParameter("categoria");
-            CategoriaLibro categoriaLibro = CategoriaLibro.valueOf(categoria);
+        String categoria = req.getParameter("categoria");
+
+        if (categoria != null && !categoria.trim().isEmpty()) {
             try {
-                if(agregarCategoriaLibro(categoriaLibro)){
-                    req.setAttribute("categoria",categoriaLibro);
-                    respuesta = req.getRequestDispatcher("/registroExitosoCategoriaLibro.jsp");
-                }
+                DSLContext query = DBGenerator.conectarBD("librosbd");
+                CategoriaLibro categoriaLibro = new CategoriaLibro(0, categoria);
+                CategoriaLibroDAO.registrarCategoriaLibro(query, categoriaLibro);
+                req.setAttribute("categoriaLibro", categoriaLibro);
+                req.getRequestDispatcher("/registroExitoso.jsp").forward(req, resp);
             } catch (ClassNotFoundException e) {
                 e.printStackTrace();
+                req.setAttribute("error", "Error registrando la categoría.");
+                req.getRequestDispatcher("/registroErroneo.jsp").forward(req, resp);
             }
+        } else {
+            req.setAttribute("error", "El campo categoría no puede estar vacío.");
+            req.getRequestDispatcher("/registroErroneo.jsp").forward(req, resp);
         }
-        respuesta.forward(req,resp);
     }
-    private boolean agregarCategoriaLibro(CategoriaLibro categoriaLibro) throws ClassNotFoundException {
-        DSLContext query= DBGenerator.conectarBD("LibrosBD");
-        List<CategoriaLibro> categorias = CategoriaLibroDAO.obtenerCategoriaLibro(query,"categoria",categoriaLibro);
-        if(categorias.size()!=0){
-            return false;
-        }
-        CategoriaLibroDAO.registrarCategoriaLibro(query,categoriaLibro);
-        return true;
-    }
-
-
-
 }
